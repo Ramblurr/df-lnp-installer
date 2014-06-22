@@ -79,7 +79,7 @@ build_dwarf_fortress_unfunck () {
 
 	local DF_UNFUNCK_DIR="$DOWNLOAD_DIR/df_unfunck"
 
-    ( cd "$DF_UNFUNCK_DIR/build" && cmake ..  && make -j2 )
+    ( mkdir "$DF_UNFUNCK_DIR/build" && cd "$DF_UNFUNCK_DIR/build" && cmake ..  && make -j2 )
 
 	if [ "$?" != "0" ]; then
 		# Clean up after ourself.
